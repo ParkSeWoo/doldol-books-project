@@ -1,3 +1,5 @@
+# 최초 교육으 하고 해당 프로젝트는 멀티 프로젝트 및 gradle 등으로 바꾸고 spring 3.0으로도 바꿔 볼꺼임
+
 # RentalMS
 - 프로젝트 생성
   - https://start.spring.io/
