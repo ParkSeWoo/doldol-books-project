@@ -64,7 +64,7 @@ public class RentalCard {
         if (this.rentalItemList.size() > 5) throw new Exception("이미 5권을 대여했습니다.");
     }
 
-    public RentalCard returnitem(Item item, LocalDate retrunDate){
+    public RentalCard returnItem(Item item, LocalDate retrunDate){
         RentItem rentalItem = this.rentalItemList.stream().filter(i ->
                 i.getItem().equals(item)).findFirst().get();
         calculateLateFee(rentalItem,retrunDate);

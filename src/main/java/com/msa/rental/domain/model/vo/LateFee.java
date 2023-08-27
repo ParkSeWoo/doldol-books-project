@@ -10,11 +10,11 @@ import lombok.NoArgsConstructor;
 public class LateFee {
     private Integer point;
 
-    public LateFee addPoint(Integer point) {
+    public LateFee addPoint(int point) {
         return new LateFee(this.point + point);
     }
 
-    public LateFee removePoint(Integer point) throws Exception {
+    public LateFee removePoint(int point) throws Exception {
         if (point > this.point) {
             throw new Exception("보유한 포이트보다 커서 삭제할수 없습니다.");
         }
