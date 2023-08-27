@@ -61,7 +61,7 @@ public class RentalApplication {
         System.out.println("--- [ " +
                 sampleCard.getRentalItemList().stream().map(m -> m.getItem().getTitle()).collect(Collectors.toList()));
         System.out.println("--- [ 반납목록");
-        System.out.println("--- [ " + sampleCard.getRetrunItemList().stream().map(m -> m.getItem().getItem().getTitle()).collect(Collectors.toList()));
+        System.out.println("--- [ " + sampleCard.getReturnItemList().stream().map(m -> m.getItem().getItem().getTitle()).collect(Collectors.toList()));
 
         System.out.println("▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨▨");
     }

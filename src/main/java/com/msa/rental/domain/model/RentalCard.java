@@ -20,7 +20,7 @@ public class RentalCard {
     private RentalStatus rentalStatus;
     private LateFee totalLateFee;
     private List<RentItem> rentalItemList = new ArrayList<RentItem>();
-    private List<ReturnItem> retrunItemList = new ArrayList<ReturnItem>();
+    private List<ReturnItem> returnItemList = new ArrayList<ReturnItem>();
 
     public static RentalCard sample(){
         RentalCard rentalCard = new RentalCard();
@@ -40,10 +40,10 @@ public class RentalCard {
     }
 
     private void addReturnItem(ReturnItem returnItem) {
-        this.retrunItemList.add(returnItem);
+        this.returnItemList.add(returnItem);
     }
 
-    public static RentalCard createReantalCard(IdName idName) {
+    public static RentalCard createRentalCard(IdName idName) {
         RentalCard rentalCard = new RentalCard();
         rentalCard.setRentalCardNo(RentalCardNo.createRentalCardNo());
         rentalCard.setMember(IdName.sample());
