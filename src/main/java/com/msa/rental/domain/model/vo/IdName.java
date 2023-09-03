@@ -5,10 +5,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.persistence.Embeddable;
+
 @Slf4j
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Embeddable
 public class IdName {
     private String id;
     private String name;

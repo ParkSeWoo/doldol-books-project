@@ -6,12 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.persistence.Embeddable;
 import java.time.LocalDate;
 
 @Slf4j
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Embeddable
 public class ReturnItem {
     private RentItem item;
     private LocalDate returnDate;

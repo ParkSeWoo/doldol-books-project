@@ -1,11 +1,13 @@
 package com.msa.rental.domain.model;
 
+import com.msa.rental.domain.model.vo.Item;
 import com.msa.rental.domain.model.entity.RentItem;
 import com.msa.rental.domain.model.vo.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
@@ -14,12 +16,19 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@Entity
 public class RentalCard {
+    @EmbeddedId
     private RentalCardNo rentalCardNo;
+    @Embedded
     private IdName member;
     private RentalStatus rentalStatus;
+    @Embedded
     private LateFee totalLateFee;
+
+    @ElementCollection
     private List<RentItem> rentalItemList = new ArrayList<RentItem>();
+    @ElementCollection
     private List<ReturnItem> returnItemList = new ArrayList<ReturnItem>();
 
     public static RentalCard sample(){

@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.persistence.Embeddable;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -12,7 +14,8 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class RentalCardNo {
+@Embeddable
+public class RentalCardNo implements Serializable {
     private String no;
 
     public static RentalCardNo createRentalCardNo() {
